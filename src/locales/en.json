@@ -1,5 +1,7 @@
 {
   "COMMON": {
+    "ENGLISH": "ENGLISH",
+    "HUNGARIAN": "MAGYAR",
     "BUTTON": {
       "SAVE": "Save",
       "CANCEL": "Cancel",

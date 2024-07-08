@@ -49,7 +49,7 @@
                       color="blue"
                       @click="setLanguage('en')"
                       class="mx-1"
-                      >English</v-btn
+                      >{{ t('COMMON.ENGLISH') }}</v-btn
                     >
                     <v-btn
                       :variant="
@@ -60,7 +60,7 @@
                       color="blue"
                       @click="setLanguage('hu')"
                       class="mx-1"
-                      >Hungarian</v-btn
+                      >{{ t('COMMON.HUNGARIAN') }}</v-btn
                     >
                   </div>
                 </div>
