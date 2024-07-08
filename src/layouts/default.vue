@@ -12,8 +12,8 @@
                       <v-btn
                         :variant="
                           $router.currentRoute.value.fullPath === '/'
-                            ? 'outlined'
-                            : 'flat'
+                            ? 'flat'
+                            : 'tonal'
                         "
                         color="green"
                         class="mx-1"
@@ -27,8 +27,8 @@
                       <v-btn
                         :variant="
                           $router.currentRoute.value.fullPath === '/stats'
-                            ? 'outlined'
-                            : 'flat'
+                            ? 'flat'
+                            : 'tonal'
                         "
                         color="green"
                         class="mx-1"
@@ -43,8 +43,8 @@
                     <v-btn
                       :variant="
                         appStore.app.currentLanguage === 'en'
-                          ? 'outlined'
-                          : 'flat'
+                          ? 'flat'
+                          : 'tonal'
                       "
                       color="blue"
                       @click="setLanguage('en')"
@@ -54,8 +54,8 @@
                     <v-btn
                       :variant="
                         appStore.app.currentLanguage === 'hu'
-                          ? 'outlined'
-                          : 'flat'
+                          ? 'flat'
+                          : 'tonal'
                       "
                       color="blue"
                       @click="setLanguage('hu')"

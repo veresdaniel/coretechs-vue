@@ -49,7 +49,8 @@
                 class="text-none font-weight-regular"
                 prepend-icon="mdi-account"
                 :text="t('USER_LIST.BUTTON.ADD_USER')"
-                variant="tonal"
+                color="blue"
+                variant="flat"
                 v-bind="activatorProps"
               ></v-btn>
             </template>
