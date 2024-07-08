@@ -1,4 +1,3 @@
-// Utilities
 import { defineStore } from 'pinia'
 import User from '@/models/user.model'
 import AppStore from '@/models/app.store.model';

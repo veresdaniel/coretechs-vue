@@ -1,21 +1,6 @@
+import { GetUsersParams, PaginatedResult } from "@/infrastructure/interfaces";
 import User from "@/models/user.model";
 import { useAppStore } from "@/stores/app";
-
-interface SortBy {
-  key: string;
-  order: 'asc' | 'desc';
-}
-
-interface GetUsersParams {
-  page: number;
-  itemsPerPage: number;
-  sortBy: SortBy[];
-}
-
-interface PaginatedResult {
-  items: User[];
-  total: number;
-}
 
 export const UserService = {
 

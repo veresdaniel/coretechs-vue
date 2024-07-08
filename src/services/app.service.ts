@@ -1,10 +1,11 @@
-import { useAppStore } from "@/stores/app";
+import router from "@/router";
 
 export const appService = {
   initialize() {
-    const appStore = useAppStore();
-    const defaultLocale = 'hu';
-    const savedLocale = appStore.app.currentLanguage ?? defaultLocale;
-    console.log(savedLocale)
+    router.onError((error, to) => {
+      if (error.message.includes('Failed to fetch dynamically imported module') || error.message.includes("Importing a module script failed")) {
+        window.location.href = to.fullPath;
+      }
+    })
   },
 };

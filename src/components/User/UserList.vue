@@ -209,6 +209,7 @@ import { useAppStore } from "@/stores/app";
 import { UserService } from "@/services/user.service";
 import { useI18n } from "vue-i18n";
 import User from "@/models/user.model";
+import { LoadItemsParams, PaginatedResult } from "@/infrastructure/interfaces";
 
 const { t } = useI18n({ inheritLocale: true });
 const form = ref(false);
@@ -274,21 +275,6 @@ watch(
   }
 );
 
-interface SortBy {
-  key: string;
-  order: 'asc' | 'desc';
-}
-
-interface LoadItemsParams {
-  page: number;
-  itemsPerPage: number;
-  sortBy: SortBy[];
-}
-
-interface PaginatedResult {
-  items: User[];
-  total: number;
-}
 
 function loadItems({ page, itemsPerPage, sortBy }: LoadItemsParams): void {
   loading.value = true;

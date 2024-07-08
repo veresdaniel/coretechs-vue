@@ -5,36 +5,64 @@
         <v-responsive>
           <v-row>
             <v-col cols="12">
-              <div class="justify-space-between">
+              <div class="d-flex justify-space-between">
                 <div class="d-inline-flex">
-                  <router-link to="/">
-                    <v-btn variant="tonal" color="blue" class="mx-1">
-                      <v-icon dark>mdi-home</v-icon>
-                    </v-btn>
-                  </router-link>
+                  <div>
+                    <router-link to="/">
+                      <v-btn
+                        :variant="
+                          $router.currentRoute.value.fullPath === '/'
+                            ? 'outlined'
+                            : 'flat'
+                        "
+                        color="green"
+                        class="mx-1"
+                      >
+                        <v-icon dark>mdi-home</v-icon>
+                      </v-btn>
+                    </router-link>
+                  </div>
+                  <div>
+                    <router-link to="/stats">
+                      <v-btn
+                        :variant="
+                          $router.currentRoute.value.fullPath === '/stats'
+                            ? 'outlined'
+                            : 'flat'
+                        "
+                        color="green"
+                        class="mx-1"
+                      >
+                        {{ t("STATS.TITLE") }}</v-btn
+                      >
+                    </router-link>
+                  </div>
                 </div>
                 <div class="d-inline-flex">
-                  <v-btn
-                    variant="tonal"
-                    color="blue"
-                    @click="setLanguage('en')"
-                    class="mx-1"
-                    >English</v-btn
-                  >
-                  <v-btn
-                    variant="tonal"
-                    color="blue"
-                    @click="setLanguage('hu')"
-                    class="mx-1"
-                    >Hungarian</v-btn
-                  >
-                </div>
-                <div class="d-inline-flex mx-1">
-                  <router-link to="/stats">
-                    <v-btn variant="tonal" color="blue">{{
-                      t("STATS.TITLE")
-                    }}</v-btn>
-                  </router-link>
+                  <div>
+                    <v-btn
+                      :variant="
+                        appStore.app.currentLanguage === 'en'
+                          ? 'outlined'
+                          : 'flat'
+                      "
+                      color="blue"
+                      @click="setLanguage('en')"
+                      class="mx-1"
+                      >English</v-btn
+                    >
+                    <v-btn
+                      :variant="
+                        appStore.app.currentLanguage === 'hu'
+                          ? 'outlined'
+                          : 'flat'
+                      "
+                      color="blue"
+                      @click="setLanguage('hu')"
+                      class="mx-1"
+                      >Hungarian</v-btn
+                    >
+                  </div>
                 </div>
               </div>
             </v-col>
@@ -50,6 +78,7 @@
 import { useI18n } from "vue-i18n";
 import { watchEffect } from "vue";
 import { useAppStore } from "@/stores/app";
+import router from "@/router";
 
 const { t } = useI18n({ inheritLocale: true });
 const { locale } = useI18n();

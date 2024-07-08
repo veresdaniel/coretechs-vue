@@ -1,5 +1,5 @@
 <template>
-  <Stats />
+  <UserStats></UserStats>
 </template>
 
 <script lang="ts" setup>
