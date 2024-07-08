@@ -218,7 +218,7 @@ const notificationText = ref("");
 const selectedUserId = ref(-1);
 const itemsPerPage = ref(10);
 const search: Ref<string> = ref("");
-const serverItems: Ref<[]> = ref([]);
+const serverItems: Ref<User[]> = ref([]);
 const loading: Ref<boolean> = ref(true);
 const totalItems: Ref<number> = ref(0);
 
@@ -274,10 +274,26 @@ watch(
   }
 );
 
-function loadItems({ page, itemsPerPage, sortBy }) {
+interface SortBy {
+  key: string;
+  order: 'asc' | 'desc';
+}
+
+interface LoadItemsParams {
+  page: number;
+  itemsPerPage: number;
+  sortBy: SortBy[];
+}
+
+interface PaginatedResult {
+  items: User[];
+  total: number;
+}
+
+function loadItems({ page, itemsPerPage, sortBy }: LoadItemsParams): void {
   loading.value = true;
   UserService.getUsers({ page, itemsPerPage, sortBy }).then(
-    ({ items, total }) => {
+    ({ items, total }: PaginatedResult) => {
       serverItems.value = items;
       totalItems.value = total;
       loading.value = false;

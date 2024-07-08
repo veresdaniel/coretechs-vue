@@ -93,7 +93,7 @@ const inactiveUsers = computed(() => {
 });
 
 function groupUsersByMonogram(users: User[]) {
-  const monogramCounts = users.reduce((acc, user) => {
+  const monogramCounts = users.reduce((acc: any, user: User) => {
     const monogram = `${user.firstName[0]}.${user.lastName[0]}.`;
 
     if (acc[monogram]) {
@@ -110,9 +110,4 @@ function groupUsersByMonogram(users: User[]) {
     count: monogramCounts[monogram],
   }));
 }
-
-const activeUsersGruppedByMonogram = groupUsersByMonogram(activeUsers.value);
-const inactiveUsersGruppedByMonogram = groupUsersByMonogram(inactiveUsers.value);
-
-console.log(activeUsersGruppedByMonogram);
 </script>

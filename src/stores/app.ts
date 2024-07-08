@@ -5,7 +5,7 @@ import AppStore from '@/models/app.store.model';
 
 export const useAppStore = defineStore('app', {
   state: () => ({
-    app: JSON.parse(localStorage.getItem("app")) as AppStore || { currentLanguage: "en", users: [] },
+    app: JSON.parse(localStorage.getItem("app") ?? '{"currentLanguage": "en", "users": []}') as AppStore,
   }),
   actions: {
     persistToLocalStorage() {

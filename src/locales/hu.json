@@ -12,7 +12,7 @@
     },
     "MESSAGE": {
       "SUCCESFULLY_CREATED": "Sikeresen létrehozva",
-      "SUCCESFULLY_UPDATED": "Módosítás sieres",
+      "SUCCESFULLY_UPDATED": "Módosítás sikeres",
       "SUCCESFULLY_DELETED": "Törlés sikeres"
     }
   },
