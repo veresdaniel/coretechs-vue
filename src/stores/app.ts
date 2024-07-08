@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import User from '@/models/user.model'
 import AppStore from '@/models/app.store.model';
+import {v4 as uuidv4} from 'uuid';
 
 export const useAppStore = defineStore('app', {
   state: () => ({
@@ -11,7 +12,7 @@ export const useAppStore = defineStore('app', {
       localStorage.setItem("app", JSON.stringify(this.app));
     },
     addUser(user: User) {
-      this.app.users.push({ ...user, id: this.app.users.length, creationDate: new Date().toISOString() });
+      this.app.users.push({ ...user, id: uuidv4(), creationDate: new Date().toISOString() });
       this.persistToLocalStorage();
     },
     updateUser(updatedUser: User) {
@@ -21,7 +22,7 @@ export const useAppStore = defineStore('app', {
     );
       this.persistToLocalStorage();
     },
-    deleteUser(userId: number) {
+    deleteUser(userId: string) {
       this.app.users = this.app.users.filter((object) => {
         return object.id !== userId;
       });

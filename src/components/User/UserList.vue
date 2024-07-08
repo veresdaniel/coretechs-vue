@@ -16,7 +16,7 @@
           >
             <template v-slot:item="row">
               <tr>
-                <td>{{ row.item.id }}</td>
+                <td><div class="trimmed cursor-help" :title="row.item.id">{{ row.item.id }}</div></td>
                 <td v-if="appStore.app.currentLanguage === 'en'">
                   {{ row.item.firstName }} {{ row.item.lastName }}
                 </td>
@@ -47,7 +47,7 @@
             <template v-slot:activator="{ props: activatorProps }">
               <v-btn
                 class="text-none font-weight-regular"
-                prepend-icon="mdi-account"
+                prepend-icon="mdi-plus"
                 :text="t('USER_LIST.BUTTON.ADD_USER')"
                 color="blue"
                 variant="flat"
@@ -69,6 +69,7 @@
                       <v-text-field
                         v-model="user.firstName"
                         :label="t('USER_LIST.DIALOG.LABEL.FIRST_NAME')"
+                        :placeholder="t('USER_LIST.DIALOG.PLACEHOLDER.FIRST_NAME')"
                         :rules="[required]"
                       ></v-text-field>
                     </v-col>
@@ -76,6 +77,7 @@
                       <v-text-field
                         v-model="user.lastName"
                         :label="t('USER_LIST.DIALOG.LABEL.LAST_NAME')"
+                        :placeholder="t('USER_LIST.DIALOG.PLACEHOLDER.LAST_NAME')"
                         :rules="[required]"
                       ></v-text-field>
                     </v-col>
@@ -85,8 +87,9 @@
                       <v-text-field
                         v-model="user.email"
                         type="email"
+                        :placeholder="t('USER_LIST.DIALOG.PLACEHOLDER.EMAIL')"
                         :label="t('USER_LIST.DIALOG.LABEL.EMAIL')"
-                        :rules="[required]"
+                        :rules="[ v => !v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid' ]"
                       >
                       </v-text-field>
                       <v-checkbox
@@ -217,7 +220,7 @@ const form = ref(false);
 const editMode = ref(false);
 const snackbar = ref(false);
 const notificationText = ref("");
-const selectedUserId = ref(-1);
+const selectedUserId = ref("");
 const itemsPerPage = ref(10);
 const search: Ref<string> = ref("");
 const serverItems: Ref<User[]> = ref([]);
@@ -330,7 +333,7 @@ function editUser(userData: User) {
   editMode.value = true;
 }
 
-function showDeleteConfirmation(userId: number) {
+function showDeleteConfirmation(userId: string) {
   confirmDeleteDialog.value = true;
   selectedUserId.value = userId;
 }

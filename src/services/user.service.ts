@@ -46,7 +46,7 @@ export const UserService = {
     })
   },
 
-  async deleteUser(userId: number) {
+  async deleteUser(userId: string) {
     const appStore = useAppStore();
 
     return new Promise((resolve) => {

@@ -5,10 +5,10 @@
       "CANCEL": "Cancel",
       "OK": "Ok",
       "CLOSE": "Close",
-      "DELETE": "Delete",
-      "ERROR": {
+      "DELETE": "Delete"
+    },
+    "ERROR": {
         "REQUIRED": "Field is required"
-      }
     },
     "MESSAGE": {
       "SUCCESFULLY_CREATED": "Successfully created!",
@@ -22,7 +22,7 @@
         "ID": "Id",
         "NAME": "Name",
         "EMAIL": "E-mail",
-        "IS_ACTIVE": "Is Active?",
+        "IS_ACTIVE": "Active",
         "ACTIONS": "Actions"
 
       }
@@ -37,6 +37,11 @@
         "LAST_NAME":"Last name",
         "EMAIL":"E-mail",
         "IS_ACTIVE":"User state is active"
+      },
+      "PLACEHOLDER": {
+        "FIRST_NAME":"",
+        "LAST_NAME":"",
+        "EMAIL":"john.doe@example.com"
       },
       "CONTENT": {
         "DELETE": "Do you really want to delete the selected user?'",

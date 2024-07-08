@@ -5,10 +5,10 @@
       "CANCEL": "Mégsem",
       "OK": "Ok",
       "CLOSE": "Bezárás",
-      "DELETE": "Törlés",
-      "ERROR": {
+      "DELETE": "Törlés"
+    },
+    "ERROR": {
         "REQUIRED": "A mező kitöltése kötelező!"
-      }
     },
     "MESSAGE": {
       "SUCCESFULLY_CREATED": "Sikeresen létrehozva",
@@ -22,7 +22,7 @@
         "ID": "Id",
         "NAME": "Név",
         "EMAIL": "E-mail",
-        "IS_ACTIVE": "Aktív?",
+        "IS_ACTIVE": "Aktív",
         "ACTIONS": "Műveletek"
 
       }
@@ -37,6 +37,11 @@
         "LAST_NAME":"Vezetéknév",
         "EMAIL":"E-mail cím",
         "IS_ACTIVE":"Felhasználó státusza aktív"
+      },
+      "PLACEHOLDER": {
+        "FIRST_NAME":"",
+        "LAST_NAME":"",
+        "EMAIL":""
       },
       "CONTENT": {
         "DELETE": "Biztosan törölni kívánka a felhasználót?'",

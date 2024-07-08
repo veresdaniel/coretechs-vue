@@ -8,3 +8,11 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+
+.trimmed {
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 10rem;
+}
