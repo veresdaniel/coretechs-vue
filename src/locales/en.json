@@ -1,0 +1,61 @@
+{
+  "COMMON": {
+    "BUTTON": {
+      "SAVE": "Save",
+      "CANCEL": "Cancel",
+      "OK": "Ok",
+      "CLOSE": "Close",
+      "DELETE": "Delete",
+      "ERROR": {
+        "REQUIRED": "Field is required"
+      }
+    },
+    "MESSAGE": {
+      "SUCCESFULLY_CREATED": "Successfully created!",
+      "SUCCESFULLY_UPDATED": "Successfully modified!",
+      "SUCCESFULLY_DELETED": "Successfully deleted!"
+    }
+  },
+  "USER_LIST": {
+    "TABLE": {
+      "HEADER": {
+        "ID": "Id",
+        "NAME": "Name",
+        "EMAIL": "E-mail",
+        "IS_ACTIVE": "Is Active?",
+        "ACTIONS": "Actions"
+
+      }
+    },
+    "DIALOG": {
+      "TITLE_NEW": "Create user",
+      "TITLE_EDIT": "Edit user",
+      "TITLE_DELETE": "Delete user",
+      "TITLE_DELETE_ALL": "Delete all user",
+      "LABEL": {
+        "FIRST_NAME":"First name",
+        "LAST_NAME":"Last name",
+        "EMAIL":"E-mail",
+        "IS_ACTIVE":"User state is active"
+      },
+      "CONTENT": {
+        "DELETE": "Do you really want to delete the selected user?'",
+        "DELETE_ALL": "Please confirm that you want to wipe all user!"
+      }
+    },
+    "BUTTON": {
+      "ADD_USER": "New User",
+      "DELETE_ALL_USER": "Delete all user",
+      "DELETE_USER": "Delete user"
+    }
+  },
+  "STATS": {
+    "TITLE": "Stats",
+    "ACTIVE_USERS": "Active users",
+    "ACTIVE_USERS_SUBTITLE": "List of active users",
+    "ACTIVE_USER_COUNT": "Active users: {count} person",
+    "INACTIVE_USERS": "Inactive users",
+    "INACTIVE_USERS_SUBTITLE": "List of inactive users",
+    "INACTIVE_USER_COUNT": "Inactive users: {count} person"
+  }
+}

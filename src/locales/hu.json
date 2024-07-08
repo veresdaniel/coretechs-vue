@@ -1,0 +1,61 @@
+{
+  "COMMON": {
+    "BUTTON": {
+      "SAVE": "Mentés",
+      "CANCEL": "Mégsem",
+      "OK": "Ok",
+      "CLOSE": "Bezárás",
+      "DELETE": "Törlés",
+      "ERROR": {
+        "REQUIRED": "A mező kitöltése kötelező!"
+      }
+    },
+    "MESSAGE": {
+      "SUCCESFULLY_CREATED": "Sikeresen létrehozva",
+      "SUCCESFULLY_UPDATED": "Módosítás sieres",
+      "SUCCESFULLY_DELETED": "Törlés sikeres"
+    }
+  },
+  "USER_LIST": {
+    "TABLE": {
+      "HEADER": {
+        "ID": "Id",
+        "NAME": "Név",
+        "EMAIL": "E-mail",
+        "IS_ACTIVE": "Aktív?",
+        "ACTIONS": "Műveletek"
+
+      }
+    },
+    "DIALOG": {
+      "TITLE_NEW": "Felhasználó létrehozása",
+      "TITLE_EDIT": "Felhasználó szerkesztése",
+      "TITLE_DELETE": "Felhasználó törlése",
+      "TITLE_DELETE_ALL": "Összes felhasználó törlése",
+      "LABEL": {
+        "FIRST_NAME":"Keresztnév",
+        "LAST_NAME":"Vezetéknév",
+        "EMAIL":"E-mail cím",
+        "IS_ACTIVE":"Felhasználó státusza aktív"
+      },
+      "CONTENT": {
+        "DELETE": "Biztosan törölni kívánka a felhasználót?'",
+        "DELETE_ALL": "Törli az összes felhasználót?"
+      }
+    },
+    "BUTTON": {
+      "ADD_USER": "Új felhasználó",
+      "DELETE_ALL_USER": "Összes felhasználó törlése",
+      "DELETE_USER": "Felhasználó törlése"
+    }
+  },
+  "STATS": {
+    "TITLE": "Statisztika",
+    "ACTIVE_USERS": "Aktív felhassználók",
+    "ACTIVE_USER_COUNT": "{count} aktív felhasználó",
+    "ACTIVE_USERS_SUBTITLE": "Az aktív felhassználók listája",
+    "INACTIVE_USERS": "Inaktív felhasználók",
+    "INACTIVE_USER_COUNT": "{count} inaktív felhasználó",
+    "INACTIVE_USERS_SUBTITLE": "Az inaktív felhasználók listája"
+  }
+}
