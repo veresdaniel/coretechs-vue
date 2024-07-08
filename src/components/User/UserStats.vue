@@ -61,7 +61,7 @@
           >
           <v-card class="my-4">
             <v-card-text>
-              <div>{{ u.monogram }}: {{ u.count }}</div>
+              <div><h4 class="d-inline">{{ u.monogram }}:</h4> <span>{{ u.count }}</span></div>
             </v-card-text>
           </v-card>
           </template>
