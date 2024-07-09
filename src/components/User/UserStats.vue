@@ -3,12 +3,7 @@
     <v-responsive class="my-10 fill-height mx-auto">
       <v-row>
         <v-col class="v-col-12 v-col-md-6">
-          <v-card
-            class="mx-auto"
-            prepend-icon="mdi-account"
-            :subtitle="t('STATS.ACTIVE_USERS_SUBTITLE')"
-            width="100%"
-          >
+          <v-card class="mx-auto" prepend-icon="mdi-account" :subtitle="t('STATS.ACTIVE_USERS_SUBTITLE')" width="100%">
             <template v-slot:title>
               <span class="font-weight-black">{{
                 t("STATS.ACTIVE_USERS")
@@ -23,23 +18,19 @@
               </h2>
             </v-card-text>
           </v-card>
-          <template
-            v-for="u in groupUsersByMonogram(activeUsers)" :key="u"
-          >
-          <v-card class="my-4">
-            <v-card-text>
-              <div><h4 class="d-inline">{{ u.monogram }}:</h4> <span>{{ u.count }}</span></div>
-            </v-card-text>
-          </v-card>
+          <template v-for="u in groupUsersByMonogram(activeUsers)" :key="u">
+            <v-card class="my-4">
+              <v-card-text>
+                <div>
+                  <h4 class="d-inline">{{ u.monogram }}:</h4> <span>{{ u.count }}</span>
+                </div>
+              </v-card-text>
+            </v-card>
           </template>
         </v-col>
         <v-col class="v-col-12 v-col-md-6">
-          <v-card
-            class="mx-auto"
-            prepend-icon="mdi-account-alert-outline"
-            :subtitle="t('STATS.INACTIVE_USERS_SUBTITLE')"
-            width="100%"
-          >
+          <v-card class="mx-auto" prepend-icon="mdi-account-alert-outline"
+            :subtitle="t('STATS.INACTIVE_USERS_SUBTITLE')" width="100%">
             <template v-slot:title>
               <span class="font-weight-black">{{
                 t("STATS.INACTIVE_USERS")
@@ -56,19 +47,18 @@
               </h2>
             </v-card-text>
           </v-card>
-          <template
-            v-for="u in groupUsersByMonogram(inactiveUsers)" :key="u"
-          >
-          <v-card class="my-4">
-            <v-card-text>
-              <div><h4 class="d-inline">{{ u.monogram }}:</h4> <span>{{ u.count }}</span></div>
-            </v-card-text>
-          </v-card>
+          <template v-for="u in groupUsersByMonogram(inactiveUsers)" :key="u">
+            <v-card class="my-4">
+              <v-card-text>
+                <div>
+                  <h4 class="d-inline">{{ u.monogram }}:</h4> <span>{{ u.count }}</span>
+                </div>
+              </v-card-text>
+            </v-card>
           </template>
         </v-col>
       </v-row>
     </v-responsive>
-    {{ appStore.app.users }}
   </v-container>
 </template>
 

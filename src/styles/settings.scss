@@ -9,10 +9,14 @@
 //   $color-pack: false
 // );
 
+#app {
+  max-width: 110rem;
+  margin: 0 auto;
+}
 
 .trimmed {
   text-overflow: ellipsis;
-  overflow:hidden;
-  white-space:nowrap;
+  overflow: hidden;
+  white-space: nowrap;
   width: 10rem;
 }
